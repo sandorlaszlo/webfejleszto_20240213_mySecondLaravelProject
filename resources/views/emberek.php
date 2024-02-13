@@ -9,25 +9,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Össze vissza próbálkozások</h1>
         <?php
-            // dd($_SERVER); //dump and die
-
-            echo '<p>Hello World</p>';
-            echo '2  + 2 = ' . (2 + 2);
-
-            $emberek = [
-                'Józsi',
-                'Pista',
-                'Béla',
-            ];
 
             echo '<h2>Emberek</h2>';
-            echo '<ul class="list-group">';
+            
+            echo '<table class="table table-striped">';
             foreach ($emberek as $ember) {
-                echo '<li class="list-group-item">'. $ember. '</li>';
+                echo '<tr>';
+                    echo '<td>'. $ember->name . '</td>';
+                    echo '<td>'. $ember->age . '</td>';
+                    echo '<td>'. $ember->gender . '</td>';
+                    echo '<td>'. $ember->address  . '</td>';
+                echo '</tr>';
             }
-            echo '</ul>';
+            echo '</table>';
         ?>
     </div>
 
